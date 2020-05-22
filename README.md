@@ -9,13 +9,13 @@ Paginas web con distinos dataset:
 
 ## Índice
 
-Desarollo V0:
+Desarrollo V0:
 
 - Explicación del Código - V0 3
 - Experimentación **–** V0 4
 - Análisis **–** V0 6
 
-Desarollo V1:
+Desarrollo V1:
 
 - Explicación del Código **–** V1 (modificaciones) 7
 - Experimentación **–** V1 8
