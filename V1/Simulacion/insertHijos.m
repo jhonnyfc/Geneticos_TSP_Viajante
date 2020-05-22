@@ -13,16 +13,16 @@ function pob = insertHijos(pobIn,hijos,fitPrev,prob)
     indFit = 1:size(fitPrev,2);
     for i=1:numHi
         if (rand() < prob)
-            % Seleccionamos el de menor fit ness
-            [vmin,imin] = min(fitPrev);
+            % Seleccionamos el de mayor fitness
+            [vmax,imax] = max(fitPrev);
         else
             % Seleccionamos uno random
-            imin = randi(size(fitPrev,2));
+            imax = randi(size(fitPrev,2));
         end
         
-        indx(i) = imin;
-        fitPrev(imin) = [];
-        indFit(imin) = [];
+        indx(i) = imax;
+        fitPrev(imax) = [];
+        indFit(imax) = [];
     end
     
     % Asignamos a los hijos

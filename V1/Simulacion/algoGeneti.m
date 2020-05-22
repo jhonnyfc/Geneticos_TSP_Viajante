@@ -1,10 +1,10 @@
-function [path,dis] = algoGeneti(pob,MatCiu,probMut,ciuIni,nEpoch,tipoCru,tipoMut,proIns,numCruce)
+function [path,dis,nowGen] = algoGeneti(pob,MatCiu,probMut,ciuIni,nEpoch,tipoCru,tipoMut,proIns,numCruce)
     % Contador Genraciones
     nowGen = 0;
     
     % Se desactiva si hay, mas de nRep genracion es iguales
     flagRep = 1;
-    nRep = 100;
+    nRep = 50;
     rep = 0;
     
     nPob= size(pob,1);
@@ -31,6 +31,7 @@ function [path,dis] = algoGeneti(pob,MatCiu,probMut,ciuIni,nEpoch,tipoCru,tipoMu
         if vmin < prevMin
             prevMin = vmin;
             minPath = pob(imin,:);
+            rep = 0;
         elseif vmin == prevMin
             % Si se repita mas de nRep veces la misma mejor solucion
             % se puede decir que no mejora y se termina el experimento
